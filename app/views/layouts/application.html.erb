@@ -37,15 +37,19 @@
       <%= yield %>
     </div>
 
-    <nav class="navbar navbar-fixed-bottom" role="navigation">
+    <nav id="main-footer" class="navbar navbar-fixed-bottom" role="navigation">
       <div class="container">
         <!-- Collect the nav links, forms, and other content for toggling -->
         <ul class="nav navbar-nav">
-          <li>Made with &lt;3 by Yuri Ramocan</li>
+          <li><a href="#">Made with &lt;3 by Yuri Ramocan</a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">Twitter</a></li>
+          <li><a href="#"><%= fa_icon "envelope-o lg" %></a></li>
+          <li><a href="#"><%= fa_icon "linkedin lg" %></a></li>
+          <li><a href="#"><%= fa_icon "twitter lg" %></a></li>
+          <li><a href="#"><%= fa_icon "medium lg" %></a></li>
+          <li><a href="#"><%= fa_icon "github lg" %></a></li>
 
         </ul>
       </div><!-- /.container -->
