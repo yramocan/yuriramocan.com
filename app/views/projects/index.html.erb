@@ -1,5 +1,34 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<div class="row text-center">
+  <%= image_tag("Yuri-natural-headshot-optimized.jpg", id: "profile-photo") %>
+</div>
 
-<%= form_for @projects do |form| %>
-<% end %>
+<div class="row">
+  <% @projects.each do |project| %>
+    <div class="col-md-4">
+      <div class="project-box">
+
+        <!-- Image and title links to project page -->
+        <a href="<%= project.url %>" class="project-url" target="_blank">
+          <div class="project-image">
+            <img src="<%= project.box_art_url %>"
+                 alt="<%= project.title %> - <%= project.description %>"
+                 class="project-box-art">
+          </div>
+          <h2 class="project-title">
+              <%= project.title %>
+          </h2>
+        </a>
+
+        <!-- Show complete if project is complete, incomplete otherwise. -->
+        <p class="completion-status">
+          Status:
+          <% if project.completed? %>
+            <span class="complete">Completed</span>
+          <% else %>
+            <span class="incomplete">Incomplete</span>
+          <% end %>
+        </p>
+      </div>
+    </div>
+  <% end %>
+</div>

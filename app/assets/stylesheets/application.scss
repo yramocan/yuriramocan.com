@@ -16,3 +16,64 @@
 
  @import "bootstrap-sprockets";
  @import "bootstrap";
+
+ html, html a {
+   color: #333333 !important;
+   font-family: "Open Sans", "Helvetica Neue", sans-serif;
+   -webkit-font-smoothing: antialiased;
+   text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+ }
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+}
+
+ a {
+   &:hover {
+    color: #111111 !important;
+   }
+ }
+
+ #main-wrapper {
+   margin-top: 25px;
+ }
+
+ nav#main-nav {
+  //  margin-bottom: 0 !important;
+
+   .navbar-brand {
+     font-size: 24px;
+     font-weight: bold;
+   }
+
+   a {
+     color: inherit;
+
+     &:hover {
+       background-color: transparent;
+     }
+   }
+ }
+
+ img#profile-photo {
+   max-width: 200px;
+   max-height: auto;
+   border-radius: 50%;
+ }
+
+ p.completion-status {
+  font-weight: bold;
+
+  span.complete {
+    color: green;
+  }
+
+  span.incomplete {
+    color: red;
+  }
+ }
+
+ a.project-url {
+   color: inherit;
+   text-decoration: none;
+ }
