@@ -15,3 +15,23 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function() {
+  var slugs = [
+    "Developer",
+    "Filmmaker",
+    "Producer",
+    "Wordsmith"
+  ];
+
+  var i = 0;
+
+  function loop() {
+    $("#profile-slug").html(slugs[i]);
+    if (i == slugs.length) i =-1; i++;
+    setTimeout(loop, 4000);
+  }
+
+  loop();
+
+});
