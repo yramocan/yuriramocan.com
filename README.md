@@ -4,7 +4,7 @@ This is my personal portfolio site, built with Ruby on Rails. As you may be able
 
 ## Quick Start
 
-To begin, first (download the source files.)[https://github.com/yramocan/yuriramocan.com/archive/master.zip]
+To begin, first [download the source files.](https://github.com/yramocan/yuriramocan.com/archive/master.zip)
 
 Then...
 * `cd` to the project directory.
