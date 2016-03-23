@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   get 'educations/edit'
-
   get 'educations/new'
 
   resources :projects

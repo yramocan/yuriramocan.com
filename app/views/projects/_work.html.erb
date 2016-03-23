@@ -1,6 +1,6 @@
 <section id="work">
   <div class="row">
-    <h2 id="work-intro" class="space-below">My Work <small class="pull-right"><%= link_to "Add New Project", new_project_path %></small></h2>
+    <h2 id="work-intro" class="space-below">My Work</h2>
     <% @projects.each do |project| %>
       <div class="col-md-4">
         <div class="project-box">
@@ -29,7 +29,6 @@
             <% else %>
               <span class="in-progress">In Progress</span>
             <% end %>
-            <span class="edit"><%= link_to "Edit", edit_project_path(project) %></span>
           </p>
         </div>
       </div>

@@ -1,10 +1,10 @@
-<h3 style="font-weight:300;margin-bottom:0;">Education <small class="pull-right"><%= link_to "Add New School", new_education_path %></small></h3>
+<h3 style="font-weight:300;margin-bottom:0;">Education</h3>
 <div id="educations">
   <% @educations.each do |education| %>
     <article class="education">
       <h4 class="education-school"><%= education.school %><span class="education-degree"> // <%= education.degree %></span></h4>
 
-      <span class="education-info"><%= education.location %> &middot; <%= education.date %> <%= link_to "Edit", edit_education_path(education) %></span>
+      <span class="education-info"><%= education.location %> &middot; <%= education.date %></span>
 
       <p class="education-description"><%= education.description %></p>
     </article>
