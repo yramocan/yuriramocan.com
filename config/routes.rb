@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
-  get 'experiences/edit'
+  get 'educations/edit'
 
-  get 'experiences/new'
+  get 'educations/new'
+
+  resources :projects
+  resources :experiences
+  resources :educations
 
   root 'projects#index'
-  resources :projects
   get '/admin' => 'projects#new'
 end

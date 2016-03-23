@@ -342,8 +342,66 @@ section#intro {
   }
 }
 
-.nav > li, .nav > li > a {
-  display: inline !important;
+#resume {
+  #experiences {
+    margin-top: 15px;
+    padding-left: 18px;
+    border-left: 2px solid #444444;
+  }
+
+  .experience {
+    margin-bottom: 25px;
+  }
+
+  .experience-position {
+    margin-bottom: 0;
+  }
+
+  .experience-workplace {
+    color: grey;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .experience-info {
+    margin-top: 0;
+  }
+
+  .experience-description {
+    margin-top: 10px;
+    font-size: 16px;
+  }
+
+  #educations {
+    margin-top: 15px;
+    padding-left: 18px;
+    border-left: 2px solid #444444;
+  }
+
+  .education {
+    margin-bottom: 25px;
+  }
+
+  .education-school {
+    margin-bottom: 0;
+  }
+
+  .education-degree {
+    color: grey;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .education-info {
+    margin-top: 0;
+  }
+
+  .education-description {
+    margin-top: 10px;
+    font-size: 16px;
+  }
 }
 
 #main-footer {

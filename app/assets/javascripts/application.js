@@ -26,6 +26,7 @@ $(document).ready(function() {
 
   var i = 0;
 
+  // Profile slug words fade in and out
   function loop() {
     $("#profile-slug").html(slugs[i]).animate({ opacity: 1 }, function() {
       $("#profile-slug").delay(3000).animate({ opacity: 0 }, function() {
@@ -36,5 +37,21 @@ $(document).ready(function() {
   }
 
   loop();
+
+  // Smooth scrolling for on-page anchor tags
+  $(function() {
+  $('a[href*="#"]:not([href="#"])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000);
+        return false;
+      }
+    }
+  });
+});
 
 });

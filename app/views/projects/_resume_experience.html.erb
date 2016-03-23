@@ -1,0 +1,12 @@
+<h3 style="font-weight:300;margin-bottom:0;">Experience <small class="pull-right"><%= link_to "Add New Experience", new_experience_path %></small></h3>
+<div id="experiences">
+  <% @experiences.each do |experience| %>
+    <article class="experience">
+      <h4 class="experience-position"><%= experience.position %><span class="experience-workplace"> @ <%= experience.workplace %></span></h4>
+
+      <span class="experience-info"><%= experience.location %> &middot; <%= experience.date %> <%= link_to "Edit", edit_experience_path(experience) %></span>
+
+      <p class="experience-description"><%= experience.description %></p>
+    </article>
+  <% end %>
+</div>

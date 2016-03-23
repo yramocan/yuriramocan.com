@@ -2,6 +2,8 @@ class ProjectsController < ApplicationController
   def index
     # Show all projects on index page
     @projects = Project.all
+    @experiences = Experience.all
+    @educations = Education.all
   end
 
   def show
