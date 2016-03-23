@@ -2,58 +2,27 @@
 <html>
 <head>
   <title>Yuri Ramocan</title>
+  <%= favicon_link_tag "nestor_cube_logo_favicon.png" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
   <div id="main-wrapper">
-    <nav id="main-nav" class="navbar" role="navigation">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="<%= root_path %>">Yuri Ramocan</a>
+    <div class="container">
+      <div class="row">
+        <div id="sidebar" class="col-md-3">
+          <%= render 'layouts/sidebar' %>
+          <%= render 'layouts/footer' %>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="navbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Work</a></li>
-            <li><a href="#">Resume</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container -->
-    </nav>
-
-    <div class="container">
-      <%= yield %>
+        <div id="main-content" class="col-md-offset-1 col-md-8">
+          <%= render 'layouts/content' %>
+        </div>
+      </div>
     </div>
 
-    <nav id="main-footer" class="navbar navbar-fixed-bottom" role="navigation">
-      <div class="container">
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <ul class="nav navbar-nav">
-          <li id="footer-slug"><a href="#">Made with <%= fa_icon "heart" %> by Yuri Ramocan</a></li>
-        </ul>
 
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><%= fa_icon "envelope-o lg" %></a></li>
-          <li><a href="#"><%= fa_icon "linkedin lg" %></a></li>
-          <li><a href="#"><%= fa_icon "twitter lg" %></a></li>
-          <li><a href="#"><%= fa_icon "medium lg" %></a></li>
-          <li><a href="#"><%= fa_icon "github lg" %></a></li>
-
-        </ul>
-      </div><!-- /.container -->
-    </nav>
   </div>
 </body>
 </html>

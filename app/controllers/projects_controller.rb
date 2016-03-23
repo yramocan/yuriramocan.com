@@ -22,7 +22,7 @@ class ProjectsController < ApplicationController
       # If project successfully saves, notify user and redirect to
       # the project "show" page.
       flash[:success] = "Successfully added project."
-      redirect_to project_path
+      redirect_to root_path
     else
       # If project did not successfully save, alert user and send
       # back to "new" page.

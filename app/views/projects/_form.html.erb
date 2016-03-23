@@ -1,0 +1,42 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div class="">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= f.label :title %><br>
+    <%= f.text_field :title, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :URL %><br>
+    <%= f.text_field :url, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Box_Art_Url %><br>
+    <%= f.text_field :box_art_url, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= f.label :Complete? %>
+    <%= f.check_box :completion_status %>
+  </div>
+
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary btn-block"%>
+  </div>
+<% end %>

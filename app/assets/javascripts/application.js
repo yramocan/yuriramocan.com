@@ -27,9 +27,12 @@ $(document).ready(function() {
   var i = 0;
 
   function loop() {
-    $("#profile-slug").html(slugs[i]);
-    if (i == slugs.length) i =-1; i++;
-    setTimeout(loop, 4000);
+    $("#profile-slug").html(slugs[i]).animate({ opacity: 1 }, function() {
+      $("#profile-slug").delay(3000).animate({ opacity: 0 }, function() {
+        if (i == slugs.length - 1) i =-1; i++; console.log(i);
+        setTimeout(loop);
+      });
+    });
   }
 
   loop();

@@ -1,0 +1,34 @@
+<div id="profile-section">
+  <%= image_tag("nestor_cube_logo.svg", id: "profile-photo") %>
+  <br>
+  <h2 id="profile-intro" class="text-center"><%= link_to "Yuri Ramocan", root_path %></h2>
+  <h3 id="profile-slug" class="text-center"></h3>
+
+  <ul id="side-links" class="text-center">
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#resume">Resume</a></li>
+  </ul>
+
+  <br>
+  <p class="text-center">
+    <strong>Location:</strong> Ann Arbor, MI <br>
+    Seeking internship for <strong>Summer '16</strong></p>
+  <br>
+
+  <p id="contact-icon" class="text-center"><%= fa_icon "user 2x" %></p>
+  <p id="contact-info" class="text-center space-below">
+    <span id="phone">313.663.9318</span> <br>
+    <span id="email">
+      <a href="mailto:yramocan@umich.edu">yramocan@umich.edu</a>
+    </span>
+  </p>
+
+  <ul id="side-social">
+    <li><a href="https://www.linkedin.com/in/yuri-ramocan-51b82659" target="_blank"><%= fa_icon "linkedin lg" %></a></li>
+    <li><a href="https://twitter.com/_ramocan" target="_blank"><%= fa_icon "twitter lg" %></a></li>
+    <li><a href="https://medium.com/@yramocan" target="_blank"><%= fa_icon "medium lg" %></a></li>
+    <li><a href="https://github.com/yramocan" target="_blank"><%= fa_icon "github lg" %></a></li>
+
+  </ul>
+</div>

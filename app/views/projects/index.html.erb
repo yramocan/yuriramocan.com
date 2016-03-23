@@ -1,44 +1,7 @@
-<div class="row text-center">
-  <div id="profile-section">
-    <%= image_tag("Yuri-natural-headshot-optimized.jpg", id: "profile-photo") %>
-    <br>
-    <h2 id="profile-intro">Hi, I'm Yuri.</h2>
-    <h3 id="profile-slug"></h3>
-  </div>
-</div>
-
 <div class="row">
-  <h3 id="work-intro">here's some of my work...</h3>
-  <% @projects.each do |project| %>
-    <div class="col-md-4">
-      <div class="project-box">
+    <%= render 'intro' %>
+    <%= render 'about' %>
+    <%= render 'work' %>
+    <%= render 'resume' %>
 
-        <!-- Image and title links to project page -->
-        <a href="<%= project.url %>" class="project-url" target="_blank">
-          <div class="hovereffect">
-            <img src="<%= project.box_art_url %>"
-                 alt="<%= project.title %> - <%= project.description %>"
-                 class="project-box-art">
-            <div class="overlay">
-              <h3><%= project.title %></h3>
-              <p><%= project.description %></p>
-            </div>
-          </div>
-          <h3 class="project-title text-center">
-              <%= project.title %>
-          </h3>
-        </a>
-
-        <!-- Show complete if project is complete, incomplete otherwise. -->
-        <p class="completion-status text-center">
-          Status:
-          <% if project.completed? %>
-            <span class="complete">Completed</span>
-          <% else %>
-            <span class="incomplete">Incomplete</span>
-          <% end %>
-        </p>
-      </div>
-    </div>
-  <% end %>
 </div>
